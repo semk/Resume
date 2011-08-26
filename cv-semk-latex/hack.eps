@@ -1,0 +1,269 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: hack.fig
+%%Creator: fig2dev Version 3.2 Patchlevel 4
+%%CreationDate: Mon Dec 24 16:25:04 2007
+%%For: kamil@acer ()
+%%BoundingBox: 0 0 50 50
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 50 moveto 0 0 lineto 50 0 lineto 50 50 lineto closepath clip newpath
+-198.4 219.5 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+0 slj 0 slc
+ 0.06299 0.06299 sc
+%
+% Fig objects follow
+%
+% 
+% here starts figure with depth 50
+% Polyline
+%
+% pen to black in case this eps object doesn't set color first
+0 0 0 setrgbcolor
+%***********************************************************************
+%*                                                                     *
+%* Object: Image decoding PS-routine                    Date: 01.02.93 *
+%* Author: Evgeni CHERNYAEV (chernaev@vxcern.cern.ch)                  *
+%*                                                                     *
+%* Function: Display a run-length encoded color image.                 *
+%*           The image is displayed in color on viewers and printers   *
+%*           that support color Postscript, otherwise it is displayed  *
+%*           as grayscale.                                             *
+%*                                                                     *
+%***********************************************************************
+/byte 1 string def
+/color 3 string def
+systemdict /colorimage known { /cnt 3 def } { /cnt 1 def } ifelse
+/String 256 cnt mul string def
+%***********************************************************************
+/DecodePacket            % Decode color packet                         *
+%***********************************************************************
+{
+  currentfile byte readhexstring pop 0 get
+  /Nbyte exch 1 add cnt mul def
+  /color ColorMap currentfile byte readhexstring pop 0 get get def
+  String dup
+  0 cnt Nbyte 1 sub { color putinterval dup } for
+  pop 0 Nbyte getinterval
+} bind def
+%***********************************************************************
+/DisplayImage            % Display run-length encoded color image      *
+%***********************************************************************
+{
+  gsave
+  currentfile String readline pop
+  token { /columns exch def } { } ifelse
+  token { /rows exch def pop } { } ifelse
+  currentfile String readline pop
+  token { /Ncol exch def pop } { } ifelse
+  /ColorMap Ncol array def
+  systemdict /colorimage known {
+    0 1 Ncol 1 sub {
+      ColorMap exch
+      currentfile 3 string readhexstring pop put
+    } for
+    columns rows 8
+    [ columns 0 0 rows neg 0 rows ]
+    { DecodePacket } false 3 colorimage
+  }{
+    0 1 Ncol 1 sub {
+      ColorMap exch
+      1 string dup 0
+      currentfile color readhexstring pop pop
+      color 0 get 0.299 mul
+      color 1 get 0.587 mul add
+      color 2 get 0.114 mul add
+      cvi put put
+    } for
+    columns rows 8
+    [ columns 0 0 rows neg 0 rows ]
+    { DecodePacket } image
+  } ifelse
+  grestore
+} bind def
+n gs
+3150 2700 tr
+14.272727 -14.272727 sc
+0 -55 tr
+0 0 tr
+sa
+/showpage {} def
+% PNG image follows:
+55 55 sc
+%***********************************************
+%*              Image decoding                 *
+%***********************************************
+DisplayImage
+55 55
+256
+000000010101020202030303040404050505060606070707080808090909
+0a0a0a0b0b0b0c0c0c0d0d0d0e0e0e0f0f0f101010111111121212131313
+1414141515151616161717171818181919191a1a1a1b1b1b1c1c1c1d1d1d
+1e1e1e1f1f1f202020212121222222232323242424252525262626272727
+2828282929292a2a2a2b2b2b2c2c2c2d2d2d2e2e2e2f2f2f303030313131
+3232323333333434343535353636363737373838383939393a3a3a3b3b3b
+3c3c3c3d3d3d3e3e3e3f3f3f404040414141424242434343444444454545
+4646464747474848484949494a4a4a4b4b4b4c4c4c4d4d4d4e4e4e4f4f4f
+505050515151525252535353545454555555565656575757585858595959
+5a5a5a5b5b5b5c5c5c5d5d5d5e5e5e5f5f5f606060616161626262636363
+6464646565656666666767676868686969696a6a6a6b6b6b6c6c6c6d6d6d
+6e6e6e6f6f6f707070717171727272737373747474757575767676777777
+7878787979797a7a7a7b7b7b7c7c7c7d7d7d7e7e7e7f7f7f808080818181
+8282828383838484848585858686868787878888888989898a8a8a8b8b8b
+8c8c8c8d8d8d8e8e8e8f8f8f909090919191929292939393949494959595
+9696969797979898989999999a9a9a9b9b9b9c9c9c9d9d9d9e9e9e9f9f9f
+a0a0a0a1a1a1a2a2a2a3a3a3a4a4a4a5a5a5a6a6a6a7a7a7a8a8a8a9a9a9
+aaaaaaabababacacacadadadaeaeaeafafafb0b0b0b1b1b1b2b2b2b3b3b3
+b4b4b4b5b5b5b6b6b6b7b7b7b8b8b8b9b9b9babababbbbbbbcbcbcbdbdbd
+bebebebfbfbfc0c0c0c1c1c1c2c2c2c3c3c3c4c4c4c5c5c5c6c6c6c7c7c7
+c8c8c8c9c9c9cacacacbcbcbcccccccdcdcdcecececfcfcfd0d0d0d1d1d1
+d2d2d2d3d3d3d4d4d4d5d5d5d6d6d6d7d7d7d8d8d8d9d9d9dadadadbdbdb
+dcdcdcdddddddedededfdfdfe0e0e0e1e1e1e2e2e2e3e3e3e4e4e4e5e5e5
+e6e6e6e7e7e7e8e8e8e9e9e9eaeaeaebebebecececedededeeeeeeefefef
+f0f0f0f1f1f1f2f2f2f3f3f3f4f4f4f5f5f5f6f6f6f7f7f7f8f8f8f9f9f9
+fafafafbfbfbfcfcfcfdfdfdfefefeffffff
+01bd00c401bd00c401bd00c403bd01c402bd008e00bd00c401bd00c409bd00c400bd008e
+00bd00c401bd00c401bd00c403bd01c404bd00f500fe01f501fe01f500fe00f500fe01f5
+00fe00f500fe00f5008e00ef00fe02f502fe00f502fe00f500fe00f500fe00f5008e00ef
+00fe01f501fe01f500fe00f500fe01f500fe00f500fe00f501bd00f50efe00f5009500f5
+03fe00c90083004b0026004b008300c903fe00f5008e00f50efe00f501bd00f50efe00f5
+009500f501fe00f500660600006600f501fe00f5009500f50efe00f500bd00c400f50efe
+00f5009500f500fe00f500400800004000f500fe00f5009800f50efe00f500c400bd0ffe
+00f5009500f500fe00660a00006600fe00f5009500f50ffe01bd00f50efe00f5009500fe
+00c90c0000c900fe009500f50ffe01bd0ffe00f5009500fe00830c00008300fe009500f5
+0efe00f501bd00f50efe00f5009800f5004b0c00005400f5009500f50ffe00bd00c400f5
+0efe00f5009800ef00280c00002800f5009800f50ffe00bd00c400f50efe00f5009500fe
+004b0c00004b00f5009800f50efe00f501bd0ffe00f5008e00fe008e0c00008300fe008e
+00f50ffe01bd00f50efe00f5009500fe00c90c0000c900fe009500f50ffe01bd0ffe00f5
+009500f500fe00660a00006600fe00f5009800f50efe00f500bd00c400f50efe00f50098
+00f500fe00f5004b0800004000f500fe00f5009500f50ffe00c400bd00f50efe00f50095
+00f501fe00f500660600006600f501fe00f5009800f50efe00f500bd00c400f50efe00f5
+009800f503fe00c90083004b0028004b008300c903fe00f5009800f50efe00f501bd10f5
+008e00ef00fe02f501fe01f502fe04f5008e00ef0ff500bd018e00980095009800950098
+0095009800950298009500980195008e0054008e0198009500980095008e019803950098
+00950098008e0054008e019804950198008e0095019800950098018e00bd00f500fe0ef5
+008e10f5008e04f501fe01f502fe04f501bd00f50efe00f5009800f50efe00f5009800f5
+03fe00c9008e004b0026004b008300c904fe01bd00f50efe00f5009800f50efe00f50095
+00f501fe00f500660600006600f502fe00bd00c400f50efe00f5009800f50efe00f50095
+00f500fe00f500400800004000f500fe00f501bd0ffe00f5009800f50efe00f5009500f5
+00fe00660a00006600fe00f501bd00f50efe00f5009800f50efe00f5009500fe00c90c00
+00c900fe01bd0ffe00f5009800f50efe00f5008e00fe00830c00008300fe00bd00c400f5
+0efe00f5009500f50efe00f5009800f5004b0c00004b00fe01bd00f50efe00f5009800f5
+0efe00f5009800f500280c00002600f500bd00c400f50efe00f5009800f50efe00f50095
+00fe004b0c00004b00fe01bd0ffe00f5009800f50efe00f5008e00fe00830c00008300fe
+01bd00f50efe00f5009800f50efe00f5009500fe00c90c0000c900fe01bd0ffe00f50098
+00f50efe00f5009500f500fe00660a00006600fe00f501bd00f50efe00f5009800f50efe
+00f5009500f500fe00f500280800004000f500fe00f500bd00c400f50efe00f5009500f5
+0efe00f5009800f502fe00660600006600f502fe01bd0ffe00f5009800f50efe00f50098
+00f503fe00c90083004b00260054008e00c903fe00f500c400bd10f5008e00ef0ff5008e
+04f501fe02f501fe04f500bd018e02980195008e01950098008e0195009800950098008e
+0054008e0098009500980195008e01980095008e0195009800950098008e0054008e0198
+00950098018e009500980095018e0098009500980095018e00bd04f501fe01f502fe04f5
+008e04f501fe01f502fe04f5008e04f502fe00ef00f501fe04f501bd00f503fe00c90083
+004b0028004b008300c903fe00f5009800f503fe00c90083004b0028004b008300c903fe
+00f5009800f503fe00c90083004b0028004b008300c903fe00f501bd00f501fe00f50066
+0600006600f501fe00f5009800f501fe00f500660600006600f501fe00f5009500f501fe
+00f500660600006600f502fe00bd00c400f500fe00f5004b0800004b00f500fe00f50095
+00f500fe00f500400800004000f500fe00f5009500f500fe00f500400800004000f500fe
+00f501bd00f500fe00660a00006600fe00f5009800f500fe00660a00006600fe00f50095
+00f500fe00660a00006601fe01bd00fe00c90c0000c900fe008e00fe00c90c0000c900fe
+008e00fe00c90c0000c900fe01bd00fe00830c00008300fe008e00fe00830c00008300fe
+008e00fe00830c00008300fe01bd00fe004b0c00004b00fe009500f5004b0c00004b00fe
+009500fe004b0c00004b00fe01bd00f500260c00002600f5009800f500280c00002600f5
+009800ef00260c00002600f500c400bd00fe004b0c00004b00f5009500fe004b0c00004b
+00f5009500fe004b0c00004b00f501bd00fe00830c00008300fe008e00fe00830c000083
+00fe008e00fe00830c00008300fe01bd00fe00c90c0000c900fe008e00fe00c90c0000c9
+00fe008e00fe00c90c0000c900fe01bd00f500fe00660a00006600fe00f5009800f500fe
+00660a00006600fe00f5009800f500fe00660a00006600fe00f501bd01fe00f500400800
+004b00f500fe00f5009500f500fe00f500400800004000f500fe00f5009500f500fe00f5
+00400800004b00f500fe00f501bd00f501fe00f500660600006600f501fe00f5009500f5
+01fe00f500660600006600f501fe00f5009500f501fe00f500660600006600f501fe00f5
+01c400f503fe00c90083004b0026004b008300c901fe00f500fe00f5009500f503fe00c9
+0083004b0026004b008300c903fe00f5009800f503fe00c90083004b0026004b008300c9
+03fe00f500c400bd00f501fe00f502fe01f502fe04f5008e00f500fe00f500fe00f500fe
+00f500fe00f502fe01f500fe01f5008e00f500fe02f502fe01f501fe02f500fe00f509bd
+00c405bd00c400bd008e01bd00c409bd00c402bd008e00bd00c40fbd
+restore grestore
+%
+% End Imported PIC File: hack.png
+%
+% here ends figure;
+$F2psEnd
+rs
+showpage

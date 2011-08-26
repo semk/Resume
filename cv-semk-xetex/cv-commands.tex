@@ -1,0 +1,66 @@
+% Set of commands used by cv.tex
+
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{simplemargins}
+\usepackage{graphicx}
+\setleftmargin{1.5cm}
+\setrightmargin{2cm}
+\settopmargin{1.0cm}
+\setbottommargin{0cm}
+
+% starting commands
+
+\newcommand{\largeskip}[0]{\vspace{2.5mm}\\}
+\newcommand{\shortskip}[0]{\vspace{0.4mm}\\}
+
+% small caps
+\newcommand{\smcp}[1]{{\font\1="Adobe Garamond Pro:+smcp" at 11pt \1{#1}}}
+\renewcommand{\textsc}[1]{\smcp{#1}}
+
+\newcommand{\header}[3]{
+\hspace{0cm}
+\begin{tabular}{p{11cm}p{6cm}}
+{\raggedright {\headline {#1}}
+\\\vspace*{2mm}
+\headline{#2}} 
+& 
+\raggedleft{#3}
+\end{tabular}}
+
+
+\newcommand{\blocktitle}[1]{
+\parbox{\textwidth}{
+	\vspace{2mm}
+	\noindent
+	\textcolor{MidnightBlue}{
+{\font\1="Adobe Garamond Pro" at 16pt \1{#1}
+	\vspace*{1mm}
+	\hrule}
+	\vspace*{3mm}
+	\noindent
+} } }
+
+\newcommand{\headline}[1]{ {\font\1="Adobe Garamond Pro" at 20pt \1{#1}}}
+\newcommand{\setmainfont}[0]{\font\x="Adobe Garamond Pro" at 12pt \x}
+
+%%%%%%
+
+\newenvironment{resumeblock}[1]
+{\blocktitle{#1}\begin{tabular}{p{4cm}p{13cm}}}
+{\end{tabular}}
+\newcommand{\resumeitem}[2]{\noindent\raggedright{\textsc{#1}} & #2}
+
+%%%%%%
+
+\newcommand{\interest}[2]{
+\includegraphics[height=12pt]{#1}
+~\raisebox{1mm}{#2}}
+
+%%%%%%
+
+\newenvironment{interestsblock}[1]
+{\blocktitle{#1}\begin{tabular}{p{10cm}p{10cm}}}
+{\end{tabular}}
+
+\setlength{\parindent}{0mm}
+\pagestyle{empty}
