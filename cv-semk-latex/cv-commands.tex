@@ -3,6 +3,7 @@
 \usepackage[dvipsnames,usenames]{color}
 \usepackage{simplemargins}
 \usepackage{graphicx}
+\usepackage{longtable}
 \setleftmargin{2.0cm}
 \setrightmargin{2.0cm}
 \settopmargin{2.5cm}
@@ -51,7 +52,7 @@
 
 %%%%%%
 
-\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{tabular}{p{4cm}p{13cm}}}{\end{tabular}}
+\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{longtable}{p{4cm}p{13cm}}}{\end{longtable}}
 \newcommand{\resumeitem}[2]{\noindent\raggedright{\textsc{#1}} & #2}
 
 %%%%%%
