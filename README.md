@@ -2,13 +2,9 @@
 
 These directories present a CV template made with LaTeX.
 
-cv-semk-xetex/		TeX sources, compile using xetex (recommended), requires 
-			Adobe Garamond Pro font (best results). The target PDF
-			files are already compiled for you if you don't have
-			this font installed.
+* cv-semk-xetex/: TeX sources, compile using xetex (recommended), requires Adobe Garamond Pro font (best results). The target PDF files are already compiled for you if you don't have this font installed.
 			
-cv-semk-latex/		If you are unable to get the Adobe Garamond Pro font,
-			then use latex to compile with the default cmr10 font.
+* cv-semk-latex/: If you are unable to get the Adobe Garamond Pro font, then use latex to compile with the default cmr10 font.
 
 ## Installing LaTeX
 
