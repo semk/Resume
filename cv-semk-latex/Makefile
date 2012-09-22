@@ -11,6 +11,9 @@ all: $(TARGET)
 %.dvi: %.tex
 	latex $<
 
+readme:
+	pandoc -s cv-sreejith-k.en.tex -o README.md
+
 clean:
 	rm -f *.log *.aux $(TARGET) *.ps *.dvi
 
