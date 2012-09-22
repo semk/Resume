@@ -1,211 +1,140 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass{resume}
 
-\include{cv-commands}
+\renewcommand{\categoryfont}{\sc}
+
+%
+% set the space used for category titles here:
+% use the same value for oddsidemargin and marginparwidth [the latter 
+% 		will be reset to account for marginparsep]
+% 
+\setlength{\oddsidemargin}{1in}
+\setlength{\marginparwidth}{1in}
+% 
+% calculate other dimensions [textwidth and evensidemargin] 
+% in function of oddsidemargin and marginparwidth: 
+% would be nicer to put in the class file...
+%
+\addtolength{\marginparwidth}{-\marginparsep}
+ \setlength{\evensidemargin}{\oddsidemargin}
+ \setlength{\textwidth}{\paperwidth}
+ \addtolength{\textwidth}{-2in}
+ \addtolength{\textwidth}{-2\oddsidemargin}
+ \addtolength{\textwidth}{\marginparwidth}
+ \addtolength{\textwidth}{\marginparsep}
+%
+%
+\setlength{\topmargin}{-0.5in}
+%
+%
+\renewcommand{\labelcitem}{$\diamond$}
+\renewcommand{\labelitemi}{$\cdot$}
+\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
+\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
+\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
+
+\author{Sreejith Kesavan}
+% ------ Address --------------------------------------------------------
+
+\address{Member Technical Staff - II\\
+  NetApp India Private Limited\\
+  Bangalore, Karnataka\\
+  {\em Ph:} (+91) 9940 3821 62}{
+  {\em email:} \mbox{\small\tt sreejithemk@gmail.com}\\
+  {\em web:} \mbox{\small\tt foobarnbaz.com}\\
+  {\em github:} \mbox{\small\tt github.com/semk}\\
+  {\em linkedin:} \mbox{\small\tt in.linkedin.com/in/sreejithemk}}
 
 \begin{document}
-
-\setmainfont
-
-%% No hyphenation
-%% \hyphenchar\font=-1
-
-\header
-{Sreejith K}
-{Development Engineer}
-{Age: 25 years old\\
-Email: sreejithemk@gmail.com\\
-Tel: \smcp{(+91) 9940382162}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumesummary}{Summary}
-\begin{itemize}
-  \item Have been developing highly sacalable, available \& fault-tolerant platforms on the cloud since 2009.
-  \item Worked in popular opensource Virtualization technologies.
-  \item Possess a good working knowledge of various Distributed Systems and Cloud Computing platforms.
-  \item Recent research interests are Erlang/OTP and Amazon Dynamo architecture.
-\end{itemize}
-\end{resumesummary}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumeblock}{Formation}
-\resumeitem{2004–2008}{B-Tech in Computer Science \& Engineering from Jyothi Engineering College, University of Calicut, Kerala.} \\
-
-\resumeitem{2002-2004}{Higher Secondary Education in Computer Science from KPMHSS, Poothotta, Kerala.} 
-\largeskip
-
-\end{resumeblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumeblock}{Technical Skills}
-
-\resumeitem{Specialities}{Design and development of highly scalable, available and fault-tolerant services, Big Data, NoSQL Databases, Virtualization, Infrastructure as a Service, Platform as a Service, Userspace Filesystems, Debian and RPM package management.}
-\largeskip
-
-\resumeitem{Operating Systems}{GNU/Linux, Mac OSX, Microsoft Windows.}
-\largeskip
-
-\resumeitem{Languages}{Python, Objective C, C, Erlang.}
-\largeskip
-
-\resumeitem{Databases}{MySQL, SQLite, Hypertable, MongoDB, Riak, Redis, Cassandra.}
-\largeskip
-
-\resumeitem{Tools}{Apache Hadoop, Memcached, RabbitMQ, HAProxy, Nginx.}
-\largeskip
-
-\resumeitem{Cloud Platforms}{Google App Engine, Amazon EC2, Amazon S3.}
-\largeskip
-
-\resumeitem{Recent Interests}{NoSQL Databases, Cocoa framework for Mac OSX \& iOS, Distributed and Parallel Programming with Erlang, Amazon Dynamo Architecture.}
-\largeskip
-
-\end{resumeblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumeblock}{Professional Experience}
-
-\resumeitem{Since Feb 2012}{Tech Lead at K7 Computing Private Limited, Chennai.\vspace{0mm}
-  \begin{itemize} \itemsep0pt \parskip0pt \parsep0pt
-    \item Lead a team of 3 developers to build a scalable platform for PHP.
-    \item Helped clients to migrate traditional applications to the cloud.
-  \end{itemize}}
-\shortskip
-
-\resumeitem{Feb 2009 - Feb 2012}{Development Engineer at K7 Computing Private Limited, Chennai.\vspace{0mm}
-  \begin{itemize} \itemsep0pt \parskip0pt \parsep0pt
-    \item Developed Cyclozzo core services and Google App Engine compatible apis.
-    \item HyperVM api emulation for FluidVM.
-    \item Developed various FUSE based userspace filesystems for linux clusters.
-  \end{itemize}}
-\largeskip
-\end{resumeblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumeblock}{Projects}
-
-\resumeitem{Cyclozzo,\\ Platform as a Service}{Cyclozzo is a meta cloud platform designed to support the latest PaaS APIs with minimal effort. Cyclozzo currently implements two of the most popular PaaS APIs: Google App Engine Python and Google App Engine Java. Cyclozzo continuously monitors application requests and makes sure that user applications are responsive at all times, while utilizing optimal server resources. When load goes up, Cyclozzo increases the number of application instances and also decreases them when requests come down. Cyclozzo does auto scale-out and scale-in while taking in to account the application's budget/plan.}
-\largeskip
-
-\resumeitem{EggPlug,\\ NAS and Cloud Storage}{EggPlug (www.eggplug.com) is a physical device which lets you access your digital media across the Internet. Contents across various other Physical plugs and desktop installations are kept in sync. User selected files/folders are backed incrementally onto Amazon S3. Devices are authenticated using OAuth protocol. One could simply consider this product as a NAS and Dropbox solutions combined.}
-\largeskip
-
-\resumeitem{FluidVM,\\ Hypervisor Manager}{FluidVM is a virtualization platform. FluidVM provides a unified interface to manage all opensource hypervisors. A pure python implementation for which we developed our own development framework and billing solution. It comes integrated with third party billing solutions like WHMCS as well. All basic functionalities like backup, templatization, migration, SAN and local storage management work seamlessly across all hypervisors. FluidVM provides fine grained user control and allows various levels of user configurations at runtime. FluidVM has an optional VLAN and bonding functionality along with Basic Firewall and traffic controlling.}
-\largeskip
-
-\resumeitem{SampleShare,\\ FUSE Filesystem}{A FUSE (Filesystem in USErspace) filesystem written in Python that creates filesystems on the fly by querying an MSSQL server. This filesystem can be shared across Windows networks though Samba. This was designed to make it easier for a Virus Researcher to access his samples without having to search though the entire filesystem.}
-\largeskip
-
-\resumeitem{Medusa,\\ FUSE Filesystem}{Medusa is a distributed filesystem written in Python that supports file versioning and filesystem snapshots. It is possible to  configure preferred file block sizes and replication factor.}
-\largeskip
-
-\end{resumeblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumeblock}{Personal Projects}
-
-\resumeitem{Cyclozzo OSE}{Opensource Edition of the Cyclozzo Platform as a Service.}
-\largeskip
-
-\resumeitem{Voldemort}{Voldemort is a blog-aware static site generator using Jinja2 and Markdown templates. Inspired by Jekyll static site generator written in Ruby.}
-\largeskip
-
-\resumeitem{Digital Circuit Simulator}{A GUI based Digital Circuit simulation software using Python and Tkinter. Supports all basic Logic Gates and circuit elements such as Adders, Counters, Flip-Flops and Clock Generators.}
-\largeskip
-
-\resumeitem{HadoopFS}{A libary that provides Python file like interface to Hadoop Distributed Filesystem.}
-\largeskip
-
-\resumeitem{TuxPaint Magic Tool}{A Magic Tool for Tux Paint which makes a scratched effect on the canvas. Written in C.}
-\largeskip
-
-\resumeitem{Appy}{A simple Application Framework for Python which simplifies the handling of commandline options, threading, multiprocessing and logging in Python.}
-\largeskip
-
-\resumeitem{HyperGAE}{A project that helps Google App Engine SDK (Python) to run on top of Hypertable.}
-\largeskip
-
-\resumeitem{GitFS}{A FUSE filesystem written in Python that stores data on Git(Hub).}
-\largeskip
-
-\resumeitem{PlayAsia API}{The Play-Asia.com API is a set of functions that allow you to retrieve data programatically using Python.}
-\largeskip
-
-\resumeitem{Riak Python Client}{Various fixes and feature additions to the Riak Python Client.}
-\largeskip
-
-\resumeitem{Riak Multi Index}{Multiple secondary index query support for Riak using Python.}
-\largeskip
-
-\resumeitem{Hypertable Python Client}{Various fixes and feature additions to the Hypertable Python Client using Boost Library.}
-\largeskip
-
-\resumeitem{Hypertable Deployment Script}{Automated deployment of Hypertable using Fabric.}
-\largeskip
-
-\resumeitem{Pytt}{Pytt is a BitTorrent Tracker written in Python using Tornado.}
-\largeskip
-
-\end{resumeblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumeblock}{Publications}
-
-\resumeitem{Linux For You,\\ October 2009}{\emph{The New Scheduler on the Block, Dedicated to Desktops}: An article about Brain Fuck Scheduler (BFS) for Linux written by famous Linux Kernel hacker Con Kolivas.}
-\largeskip
-
-\resumeitem{ILUG-Cochin,\\ August 2008}{\emph{Custom Kernel Compilation - Ubuntu way}: A HOWTO on compiling custom kernel sources on Ubuntu published on ILUG-Cochin website.}
-\largeskip
-
-\resumeitem{ILUG-Cochin,\\ August 2008}{\emph{Remastering Ubuntu}: A HOWTO on building custom Ubuntu distributions using Reconstructor.}
-\largeskip
-
-\end{resumeblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumeblock}{Awards \& Honours}
-
-\resumeitem{2011}{Excellence in Software Development, K7 Computing Private Limited.}
-\shortskip
-
-\resumeitem{2008}{Best Project, Jyothi Engineering College.}
-\shortskip
-
-\resumeitem{2002}{Best Student Award, Edakkattuvayal Grama Panchayat, Kerala.}
-\largeskip
-
-\end{resumeblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{resumeblock}{Online Profiles}
-
-\resumeitem{Blog}{http://foobarnbaz.com}
-\shortskip
-
-\resumeitem{GitHub}{https://github.com/semk}
-\shortskip
-
-\resumeitem{LinkedIn}{http://in.linkedin.com/pub/sreejith-k/15/50b/69}
-\largeskip
-
-\end{resumeblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{interestsblock}{Interests \& Activities}
-	\interest{idea}{Learning new technologies} &
-	\interest{gnu}{Free Software Movement}\\
-	&\\
-	\interest{hack}{Solving problems} &
-	\interest{bike}{Gaming} 
-\end{interestsblock}
-
+\maketitle
+
+% ------- Education ---------------------------------------------------
+
+\begin{category}{Education}
+  \citem{B-Tech in Computer Science \& Engineering} \hfill {\em 2004 -- 2008}\\
+  University of Calicut, Jyothi Engineering College, Kerala.
+  \citem{Higher Secondary Education in Computer Science} \hfill {\em 2002 -- 2004}\\
+  Kshethra Pravesana Memorial Higher Secondary School, Poothotta, Kerala.
+\end{category}
+
+% --------- Research ----------------------------------------------------
+
+\begin{category}{Research interests}
+  \citemnobullet NoSQL databases, application development for Mac OSX \& iOS, 
+  distributed and concurrent programming with Erlang, Amazon Dynamo architecture.
+\end{category}
+
+\begin{category}{Technical Skills}
+  \citembullet {\it Operating Systems}: GNU/Linux, Mac OSX, Microsoft Windows.
+  \citembullet {\it Languages}: Python, Objective C, C, Erlang.
+  \citembullet {\it Databases}: MySQL, SQLite, Hypertable, MongoDB, Riak, Redis.
+  \citembullet {\it Tools}: Memcached, RabbitMQ, HAProxy, Nginx.
+  \citembullet {\it Platforms}: Apache Hadoop, Google App Engine, Amazon EC2, Amazon S3.
+  \citembullet {\it Specialities}: Design and development of scalable web services, Big Data, 
+  NoSQL databases, virtualization, Infrastructure as a Service, Platform as a Service, 
+  userspace filesystems, Debian and RPM package management.
+\end{category}
+
+% -------- Work experience --------------------------------------------
+
+\begin{category}{Work \\experience}
+  \citem{Member Technical Staff - II}, {\em NetApp India Private Limited} \hfill {\em Sep 2012 -- present}\\
+  Working as part of a team responsible for participating in the development, testing and 
+  debugging of operating systems and file systems that run NetApp storage applications. 
+  As part of the Research and Development function, the overall focus of the group is on 
+  competitive market and customer requirements, technology advances, product quality, 
+  product cost and time-to-market.
+  \citem{Development Engineer}, {\em K7 Computing Private Limited} \hfill {\em Feb 2009 -- Aug 2012}\\
+  Actively involved in the design and development of a cloud computing platform that can solve 
+  the problems of application scalability, availability and fault-tolerance.
+  \begin{itemize} 
+  \item Lead a team of 3 developers to build a scalable platform for Python \& PHP.
+  \item Helped clients to migrate traditional applications to the cloud.
+  \item Developed core services and Google App Engine compatible apis for a PaaS project.
+  \item Developed various FUSE based userspace filesystems for linux clusters.
+  \end{itemize}
+\end{category}
+
+% -------- Awards & Honours ---------------------------------------
+
+\begin{category}{Awards \&\\ Honours}
+  \citem{Excellence in Software Development}, {\em K7 Computing Private Limited}. \hfill {\em 2011}
+  \citem{Best Project}, {\em Computer Science, Jyothi Engineering College}. \hfill {\em 2008}
+  \citem{Best Student}, {\em Edakkattuvayal Grama Panchayat, Ernakulam, Kerala.} \hfill {\em 2002}
+\end{category}
+
+% -------- Publication --------------------------------------------
+
+\begin{category}{Articles}
+  \citem{Linux For You}, {\em ``The New Scheduler on the Block, Dedicated to Desktops''}. \hfill {\em Oct 2009}\\
+  An article about Brain Fuck Scheduler (BFS) for Linux written by famous Linux Kernel hacker Con Kolivas.
+  \citem{ILUG-Cochin}, {\em ``Custom Kernel Compilation - Ubuntu way''}. \hfill {\em Aug 2008}\\
+  An article on compiling custom kernel sources on Ubuntu.
+  \citem{ILUG-Cochin}, {\em ``Remastering Ubuntu''}. \hfill {\em Aug 2008}\\
+  An article on building custom Ubuntu distributions using Reconstructor.
+\end{category}
+
+\newpage
+
+% -------- Opensource -------------------------------------------
+
+\begin{category}{Opensource}
+  \citemnobullet All opensource projects can be found on the GitHub page. The major ones are
+  \citembullet \textbf{Cyclozzo OSE}: Opensource Edition of the Cyclozzo Platform as a Service.
+  \citembullet \textbf{Voldemort}: Voldemort is a blog-aware static site generator using Jinja2 
+  and Markdown templates. Inspired by Jekyll static site generator written in Ruby.
+  \citembullet \textbf{Riak Python client}: Various fixes and feature additions to the Riak Python Client.
+\end{category}
+
+% -------- Reference --------------------------------------------
+
+\begin{category}{Reference}
+  \citemnobullet \\
+  \begin{tabular}{ll}Shuveb Hussain&Navin Sylvester\\
+    Head, Cloud Computing&Development Manager, Cloud Computing\\
+    K7 Computing Private Limited&K7 Computing Private Limited\\
+    Chennai - 600041&Chennai - 600041\\
+    Email: \mbox{\small\tt shuveb@gmail.com}&Email: \mbox{\small\tt navinsylvester@gmail.com}\\
+    Ph: (+91) 9840 380 386&Ph: (+91) 9500 087 617
+  \end{tabular}
+\end{category}
 \end{document}
