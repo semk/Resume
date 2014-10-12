@@ -15,12 +15,12 @@
 % would be nicer to put in the class file...
 %
 \addtolength{\marginparwidth}{-\marginparsep}
- \setlength{\evensidemargin}{\oddsidemargin}
- \setlength{\textwidth}{\paperwidth}
- \addtolength{\textwidth}{-2in}
- \addtolength{\textwidth}{-2\oddsidemargin}
- \addtolength{\textwidth}{\marginparwidth}
- \addtolength{\textwidth}{\marginparsep}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+\addtolength{\textwidth}{-2\oddsidemargin}
+\addtolength{\textwidth}{\marginparwidth}
+\addtolength{\textwidth}{\marginparsep}
 %
 %
 \setlength{\topmargin}{-0.5in}
@@ -62,17 +62,24 @@
   \citemnobullet Working as part of a team responsible for participating in the development, 
   testing and debugging of operating systems and file systems that run NetApp storage applications.
   \begin{itemize}
+  \item Currently involved in the development of an Inventory Collect Tool which enables you to collect
+    information about 7-Mode storage systems, hosts attached to the storage systems, and the applications
+    running on these hosts, and to create an inventory report that contains configuration and inventory
+    information.
+  \item Involved in the development of the 7-Mode Transition Tool which enables copy-based transitions of
+    Data ONTAP® 7G and 7-Mode FlexVol® volumes and configurations to new hardware that is running clustered
+    Data ONTAP 8.2, 8.2.1, or 8.2.2, with minimum client disruption and retention of storage efficiency options.
   \item Developed an application suite (NetApp Data Center Planner) comprising of utilities that 
-  assist in data migration.
+    assist in data migration.
   \item Developed various data collection modules to collect Storage Array, Controller, Switch, Host, 
-  LUN etc. information using the NetApp Data Center Collector.
+    LUN etc. information using the NetApp Data Center Collector.
   \item Developed a Migration Planner to generate heterogeneous SAN migration plans (LUNs from 
-  other storage vendors to NetApp storage) by analyzing the current Data Center configurations.
+    other storage vendors to NetApp storage) by analyzing the current Data Center configurations.
   \item Developed a Transition Planner to migrate LUNs from NetApp 7-Mode systems to clustered
-  Data ONTAP using Data Transport Appliance (DTA2800).
+    Data ONTAP using Data Transport Appliance (DTA2800).
   \item Effectively leading the SCRUM team into successful delivery of the project milestones.
   \end{itemize}
-  \citemnobullet \textbf{Technology Stack}: Python, PyQt, MySQL, OpenSSL, WMI, SSH,
+  \citemnobullet \textbf{Technology Stack}: Python, Java, PyQt, Flask, JSON, MySQL, SQLite, OpenSSL, WMI, SSH,
   XML/HTTP, XSLT, SAN, NAS, Clustered Data ONTAP, Data ONTAP 7-Mode.
   \citem{K7 Computing Private Limited, Chennai} 
   \citemnobullet \textbf{Development Engineer} \hfill \textbf{Feb 2009 -- Aug 2012}
@@ -83,10 +90,10 @@
   \item Helped clients to scale their applications and move towards private cloud.
   \item Developed core services and Google App Engine compatible apis for a PaaS project.
   \item Developed a FUSE file system to filter files from a huge collection of malware samples 
-  and make them available as a Windows Share (Samba) that can be accessed by individual 
-  Virus Analyst from their workstations.
+    and make them available as a Windows Share (Samba) that can be accessed by individual 
+    Virus Analyst from their workstations.
   \item Developed various modules and components of a Virtualization Platform targeted at VPS Hosting
-  Providers. Supports Xen, OpenVZ and KVM Hypervisors.
+    Providers. Supports Xen, OpenVZ and KVM Hypervisors.
   \item HyperVM API emulation module for the Virtualization Management Platform.
   \item Developed a Login Shell for Data Center administrators to manage the
     Virtual Machines remotely.
@@ -100,12 +107,12 @@
   \citembullet {\it Operating Systems}: GNU/Linux, Mac OSX, Microsoft Windows.
   \citembullet {\it Programming Languages}: Python, C, Objective
   C, Erlang, Java, JavaScript, node.js.
-  \citembullet {\it Frameworks}: Pylons, Tornado, Flask, Bottle, webpy, PyQt.
+  \citembullet {\it Frameworks}: Pylons, web2py, Tornado, Flask, Bottle, webpy, PyQt.
   \citembullet {\it Databases}: MySQL, SQLite, Hypertable, Riak, Redis.
   \citembullet {\it Tools}: Memcached, RabbitMQ, HAProxy, Nginx.
   \citembullet {\it Version Control}: Git, Subversion, Mercurial,
   Perforce.
-  \citembullet {\it Virtualization Platforms}: Xen, OpenVZ, KVM.
+  \citembullet {\it Virtualization Platforms}: Xen, OpenVZ, KVM, VMware ESX(i).
   \citembullet {\it Cloud Platforms}: Apache Hadoop, Google App Engine, Amazon EC2, Amazon S3.
   \citembullet {\it Specialities}: Python, Cloud Computing, Scalable design, Big Data, Commandline 
   tools, NoSQL databases, Virtualization, API design, Web services, Automation \& deployment, 
@@ -115,10 +122,10 @@
 
 % --------- Research ----------------------------------------------------
 
-%% \begin{category}{Research interests}
-%%   \citemnobullet NoSQL databases, Big Data \& Analytics, Application development for Mac OSX \& iOS,
-%%   distributed and concurrent programming with Erlang, Amazon Dynamo architecture, development on Raspberry Pi.
-%% \end{category}
+\begin{category}{Interests}
+  \citemnobullet Opensource contributions, NoSQL databases, Big Data \& Analytics, Go, Openstack,
+  Linux containers and Docker, distributed and concurrent programming with Erlang, Amazon Dynamo architecture.
+\end{category}
 
 % ------- Education ---------------------------------------------------
 
@@ -172,6 +179,10 @@
   \citem{ILUG-Cochin}, {\em ``Remastering Ubuntu''}. \hfill \textbf{Aug 2008}
   \citemnobullet An article on building custom Ubuntu distributions using Reconstructor.
 \end{category}
+
+%% \begin{category}{Organizations}
+%%  \citem Member of the {\em Python Software Society of India}.
+%% \end{category}
 
 % -------- Reference --------------------------------------------
 
