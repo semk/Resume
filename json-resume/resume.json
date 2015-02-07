@@ -33,7 +33,6 @@
       "position": "Member Technical Staff",
       "website": "http://netapp.com",
       "startDate": "2012-09-17",
-      "endDate": "present",
       "summary": "Working as part of a team responsible for participating in the development, testing and debugging of operating systems and file systems that run NetApp storage applications.",
       "highlights": [
         "Currently involved in the development of an Inventory Collect Tool which enables you to collect information about 7-Mode storage systems, hosts attached to the storage systems, and the applications running on these hosts, and to create an inventory report that contains configuration and inventory information.",
@@ -69,8 +68,8 @@
       "institution": "University of Calicut",
       "area": "Computer Science & Engineering",
       "studyType": "Bachelor in Technology",
-      "startDate": "2004",
-      "endDate": "2008",
+      "startDate": "2004-06-06",
+      "endDate": "2008-07-07",
       "gpa": "",
       "courses": []
     }
@@ -78,25 +77,25 @@
   "awards": [
     {
       "title": "Thank You Award Certificate of Recognition",
-      "date": "2013",
+      "date": "2013-05-05",
       "awarder": "NetApp, Inc.",
       "summary": ""
     },
     {
       "title": "Excellence in Software Development",
-      "date": "2011",
+      "date": "2011-05-05",
       "awarder": "K7 Computing Private Limited",
       "summary": ""
     },
     {
       "title": "Best Project",
-      "date": "2008",
+      "date": "2008-03-03",
       "awarder": "Department of Computer Science, Jyothi Engineering College",
       "summary": ""
     },
     {
       "title": "Best Student",
-      "date": "2002",
+      "date": "2002-07-07",
       "awarder": "Edakkattuvayal Grama Panchayat, Ernakulam, Kerala.",
       "summary": ""
     }
@@ -105,21 +104,21 @@
     {
       "name": "The New Scheduler on the Block, Dedicated to Desktops",
       "publisher": "Linux For You",
-      "releaseDate": "October 2009",
+      "releaseDate": "2009-10-10",
       "website": "",
       "summary": "An article about Brain Fuck Scheduler (BFS) for Linux written by famous Linux Kernel hacker Con Kolivas."
     },
     {
       "name": "Custom Kernel Compilation - Ubuntu way",
       "publisher": "ILUG-Cochin",
-      "releaseDate": "August 2008",
+      "releaseDate": "2008-08-08",
       "website": "",
       "summary": "An article on compiling custom kernel sources on Ubuntu."
     },
     {
       "name": "Remastering Ubuntu",
       "publisher": "ILUG-Cochin",
-      "releaseDate": "August 2008",
+      "releaseDate": "2008-08-08",
       "website": "",
       "summary": "An article on building custom Ubuntu distributions using Reconstructor."
     }
