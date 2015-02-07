@@ -1,0 +1,228 @@
+{
+  "basics": {
+    "name": "Sreejith Kesavan",
+    "label": "Programmer",
+    "picture": "",
+    "email": "sreejithemk@gmail.com",
+    "phone": "+91-9986849928",
+    "website": "http://foobarnbaz.com",
+    "summary": "A Polyglot Developer with a strong background in the Cloud & Virtualization domain having built products and solutions for the web hosting businesses. Currently involved in the development of various solution tools for the Networked Storage domain at NetApp.",
+    "location": {
+      "address": "NetApp, Inc.",
+      "postalCode": "560071",
+      "city": "Bangalore",
+      "countryCode": "IN",
+      "region": "Karnataka"
+    },
+    "profiles": [
+      {
+        "network": "GithHub",
+        "username": "semk",
+        "url": "https://github.com/semk"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "sreejithemk",
+        "url": "linkedin.com/in/sreejithemkhttps://www.linkedin.com/in/sreejithemk"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "NetApp, Inc., Bangalore",
+      "position": "Member Technical Staff",
+      "website": "http://netapp.com",
+      "startDate": "2012-09-17",
+      "endDate": "present",
+      "summary": "Working as part of a team responsible for participating in the development, testing and debugging of operating systems and file systems that run NetApp storage applications.",
+      "highlights": [
+        "Currently involved in the development of an Inventory Collect Tool which enables you to collect information about 7-Mode storage systems, hosts attached to the storage systems, and the applications running on these hosts, and to create an inventory report that contains configuration and inventory information.",
+        "Involved in the development of the 7-Mode Transition Tool which enables copy-based transitions of Data ONTAP 7G and 7-Mode FlexVol volumes and configurations to new hardware that is running clustered Data ONTAP 8.2, 8.2.1, or 8.2.2, with minimum client disruption and retention of storage efficiency options.",
+        "Developed an application suite (NetApp Data Center Planner) comprising of utilities that assist in data migration.",
+        "Developed various data collection modules to collect Storage Array, Controller, Switch, Host, LUN etc. information using the NetApp Data Center Collector.",
+        "Developed a Migration Planner to generate heterogeneous SAN migration plans (LUNs from other storage vendors to NetApp storage) by analyzing the current Data Center configurations.",
+        "Developed a Transition Planner to migrate LUNs from NetApp 7-Mode systems to clustered Data ONTAP using Data Transport Appliance (DTA2800).",
+        "Effectively leading the SCRUM team into successful delivery of the project milestones."
+      ]
+    },
+    {
+      "company": "K7 Computing Private Limited, Chennai",
+      "position": "Development Engineer",
+      "website": "http://k7computing.com",
+      "startDate": "2009-02-07",
+      "endDate": "2012-08-07",
+      "summary": "Actively involved in the design and development of a cloud computing platform that can solve the problems of application scalability, availability and fault-tolerance.",
+      "highlights": [
+        "Lead a team of 3 developers to build a scalable platform for Python web applictions.",
+        "Helped clients to scale their applications and move towards private cloud.",
+        "Developed core services and Google App Engine compatible apis for a PaaS project.",
+        "Developed a FUSE file system to filter files from a huge collection of malware samples and make them available as a Windows Share (Samba) that can be accessed by individual Virus Analyst from their workstations.",
+        "Developed various modules and components of a Virtualization Platform targeted at VPS Hosting Providers. Supports Xen, OpenVZ and KVM Hypervisors.",
+        "HyperVM API emulation module for the Virtualization Management Platform.",
+        "Developed a Login Shell for Data Center administrators to manage the Virtual Machines remotely."
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "University of Calicut",
+      "area": "Computer Science & Engineering",
+      "studyType": "Bachelor in Technology",
+      "startDate": "2004",
+      "endDate": "2008",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Thank You Award Certificate of Recognition",
+      "date": "2013",
+      "awarder": "NetApp, Inc.",
+      "summary": ""
+    },
+    {
+      "title": "Excellence in Software Development",
+      "date": "2011",
+      "awarder": "K7 Computing Private Limited",
+      "summary": ""
+    },
+    {
+      "title": "Best Project",
+      "date": "2008",
+      "awarder": "Department of Computer Science, Jyothi Engineering College",
+      "summary": ""
+    },
+    {
+      "title": "Best Student",
+      "date": "2002",
+      "awarder": "Edakkattuvayal Grama Panchayat, Ernakulam, Kerala.",
+      "summary": ""
+    }
+  ],
+  "publications": [
+    {
+      "name": "The New Scheduler on the Block, Dedicated to Desktops",
+      "publisher": "Linux For You",
+      "releaseDate": "October 2009",
+      "website": "",
+      "summary": "An article about Brain Fuck Scheduler (BFS) for Linux written by famous Linux Kernel hacker Con Kolivas."
+    },
+    {
+      "name": "Custom Kernel Compilation - Ubuntu way",
+      "publisher": "ILUG-Cochin",
+      "releaseDate": "August 2008",
+      "website": "",
+      "summary": "An article on compiling custom kernel sources on Ubuntu."
+    },
+    {
+      "name": "Remastering Ubuntu",
+      "publisher": "ILUG-Cochin",
+      "releaseDate": "August 2008",
+      "website": "",
+      "summary": "An article on building custom Ubuntu distributions using Reconstructor."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Operating Systems",
+      "level": "Master",
+      "keywords": [
+        "GNU/Linux",
+        "Mac OSX",
+        "Microsoft Windows"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "level": "Master",
+      "keywords": [
+        "Python",
+        "C",
+        "Objective C",
+        "Erlang",
+        "Java",
+        "JavaScript",
+        "node.js"
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "level": "Master",
+      "keywords": [
+        "Pyramid",
+        "web2py",
+        "Tornado",
+        "Flask",
+        "Bottle",
+        "webpy",
+        "PyQt"
+      ]
+    },
+    {
+      "name": "Databases",
+      "level": "Master",
+      "keywords": [
+        "MySQL",
+        "SQLite",
+        "Hypertable",
+        "Riak",
+        "Redis",
+        "MongoDB",
+        "Cassandra"
+      ]
+    },
+    {
+      "name": "Version Control",
+      "level": "Master",
+      "keywords": [
+        "Git",
+        "Subversion",
+        "Mercurial",
+        "Perforce"
+      ]
+    },
+    {
+      "name": "Virtualization Platforms",
+      "level": "Intermediate",
+      "keywords": [
+        "Xen",
+        "OpenVZ",
+        "KVM",
+        "VMware ESX(i)"
+      ]
+    },
+    {
+      "name": "Cloud Platforms",
+      "level": "Master",
+      "keywords": [
+        "Apache Hadoop",
+        "Google App Engine",
+        "Amazon Web Services"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Software",
+      "keywords": [
+        "Opensource contributions",
+        "NoSQL databases",
+        "Big Data & Analytics",
+        "Go",
+        "Openstack",
+        "Linux Containers & Docker",
+        "Distributed and concurrent programming with Erlang",
+        "Amazon Dynamo Architecture"
+      ]
+    }
+  ],
+  "references": []
+}
