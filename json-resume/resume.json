@@ -16,14 +16,14 @@
     },
     "profiles": [
       {
-        "network": "GithHub",
+        "network": "Githhub",
         "username": "semk",
         "url": "https://github.com/semk"
       },
       {
         "network": "LinkedIn",
         "username": "sreejithemk",
-        "url": "linkedin.com/in/sreejithemkhttps://www.linkedin.com/in/sreejithemk"
+        "url": "https://www.linkedin.com/in/sreejithemk"
       }
     ]
   },
