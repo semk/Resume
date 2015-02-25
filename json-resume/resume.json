@@ -16,7 +16,7 @@
     },
     "profiles": [
       {
-        "network": "Githhub",
+        "network": "Github",
         "username": "semk",
         "url": "https://github.com/semk"
       },
