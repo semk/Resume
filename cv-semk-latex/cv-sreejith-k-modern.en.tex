@@ -1,204 +1,263 @@
-\documentclass{resume}
-\usepackage{fontspec,lipsum}
-\defaultfontfeatures{Ligatures=TeX}
-
-\setromanfont{Adobe Garamond Pro}
-\setsansfont{Tahoma}
-
-\renewcommand{\categoryfont}{\sc}
-
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
-% set the space used for category titles here:
-% use the same value for oddsidemargin and marginparwidth [the latter 
-% 		will be reset to account for marginparsep]
-% 
-\setlength{\oddsidemargin}{1in}
-\setlength{\marginparwidth}{1in}
-% 
-% calculate other dimensions [textwidth and evensidemargin] 
-% in function of oddsidemargin and marginparwidth: 
-% would be nicer to put in the class file...
-%
-\addtolength{\marginparwidth}{-\marginparsep}
- \setlength{\evensidemargin}{\oddsidemargin}
- \setlength{\textwidth}{\paperwidth}
- \addtolength{\textwidth}{-2in}
- \addtolength{\textwidth}{-2\oddsidemargin}
- \addtolength{\textwidth}{\marginparwidth}
- \addtolength{\textwidth}{\marginparsep}
-%
-%
-\setlength{\topmargin}{-0.5in}
-%
-%
-\renewcommand{\labelcitem}{$\diamond$}
-\renewcommand{\labelitemi}{$\cdot$}
-\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
-\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
-\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
-\author{Sreejith Kesavan}
-% ------ Address --------------------------------------------------------
 
-\address{Member Technical Staff\\
-  NetApp, Inc.\\
-  Bangalore, Karnataka\\
-  {\em Ph:} (+91)-99-8684-9928}{
-  {\em email:} \mbox{\small\tt sreejithemk@gmail.com}\\
-  {\em web:} \mbox{\small\tt foobarnbaz.com}\\
-  {\em github:} \mbox{\small\tt github.com/semk}\\
-  {\em linkedin:} \mbox{\small\tt linkedin.com/in/sreejithemk}}
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Sreejith}{Kesavan}
+\title{Developer}                               % optional, remove / comment the line if not wanted
+\address{Nutanix, Inc.}{Bangalore}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+91 99868 49928}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{sreejithemk@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{www.foobarnbaz.com}                         % optional, remove / comment the line if not wanted
+\extrainfo{www.github.com/semk}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 \begin{document}
-\maketitle
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
 
-\begin{category}{Summary}
-  \citemnobullet A Polyglot Developer with a strong background in the Cloud \& Virtualization 
-  domain having built products and solutions for the web hosting businesses. 
-  Currently involved in the development of various solution tools for the 
-  Networked Storage domain at NetApp.
-\end{category}
+\small{A polyglot developer with strong technical background having built multiple products in the cloud, storage
+\& virtualization domain. Currently leading
+the design and development of a cloud mobility framework for the Hyper Converged Infrastructure (HCI) platform at Nutanix, Inc.}
 
-% -------- Work experience --------------------------------------------
+\section{Work Experience}
 
-\begin{category}{Work \\experience}
-  \citem{NetApp, Inc., Bangalore}
-  \citemnobullet \textbf{Member Technical Staff} \hfill \textbf{Sep 2012 -- present}
-  \citemnobullet Working as part of a team responsible for participating in the development, 
-  testing and debugging of operating systems and file systems that run NetApp storage applications.
-  \begin{itemize}
-  \item Currently involved in the development of an Inventory Collect Tool which enables you to collect
-    information about 7-Mode storage systems, hosts attached to the storage systems, and the applications
-    running on these hosts, and to create an inventory report that contains configuration and inventory
-    information.
-  \item Involved in the development of the 7-Mode Transition Tool which enables copy-based transitions of
-    Data ONTAP® 7G and 7-Mode FlexVol® volumes and configurations to new hardware that is running clustered
-    Data ONTAP 8.2, 8.2.1, or 8.2.2, with minimum client disruption and retention of storage efficiency options.
-  \item Developed an application suite (NetApp Data Center Planner) comprising of utilities that 
-    assist in data migration.
-  \item Developed various data collection modules to collect Storage Array, Controller, Switch, Host, 
-    LUN etc. information using the NetApp Data Center Collector.
-  \item Developed a Migration Planner to generate heterogeneous SAN migration plans (LUNs from 
-    other storage vendors to NetApp storage) by analyzing the current Data Center configurations.
-  \item Developed a Transition Planner to migrate LUNs from NetApp 7-Mode systems to clustered
-    Data ONTAP using Data Transport Appliance (DTA2800).
-  \item Effectively leading the SCRUM team into successful delivery of the project milestones.
-  \end{itemize}
-  \citemnobullet \textbf{Technology Stack}: Python, Java, PyQt, Flask, JSON, MySQL, SQLite, OpenSSL, WMI, SSH,
-  XML/HTTP, XSLT, SAN, NAS, Clustered Data ONTAP, Data ONTAP 7-Mode.
-  \citem{K7 Computing Private Limited, Chennai} 
-  \citemnobullet \textbf{Development Engineer} \hfill \textbf{Feb 2009 -- Aug 2012}
-  \citemnobullet Actively involved in the design and development of a cloud computing platform 
-  that can solve the problems of application scalability, availability and fault-tolerance.
-  \begin{itemize} 
-  \item Lead a team of 3 developers to build a scalable platform for Python web applictions.
-  \item Helped clients to scale their applications and move towards private cloud.
-  \item Developed core services and Google App Engine compatible apis for a PaaS project.
-  \item Developed a FUSE file system to filter files from a huge collection of malware samples 
-    and make them available as a Windows Share (Samba) that can be accessed by individual 
-    Virus Analyst from their workstations.
-  \item Developed various modules and components of a Virtualization Platform targeted at VPS Hosting
-    Providers. Supports Xen, OpenVZ and KVM Hypervisors.
-  \item HyperVM API emulation module for the Virtualization Management Platform.
-  \item Developed a Login Shell for Data Center administrators to manage the
-    Virtual Machines remotely.
-  \end{itemize}
-  \citemnobullet \textbf{Technology Stack}: Python, C, Objective C, MySQL, SQLite, XML-RPC,
-  Protocol Buffers, FUSE, HTTP/REST, Apache Hadoop, Hypertable, Riak, Redis,
-  Memcached, RabbitMQ, Xen, OpenVZ, KVM, WSGI, libvirt, collectd, epoll etc.
-\end{category}
+\vspace{6pt}
 
-\begin{category}{Technical Skills}
-  \citembullet {\it Operating Systems}: GNU/Linux, Mac OSX, Microsoft Windows.
-  \citembullet {\it Programming Languages}: Python, C, Objective
-  C, Erlang, Java, JavaScript, node.js.
-  \citembullet {\it Frameworks}: Pylons, web2py, Tornado, Flask, Bottle, webpy, PyQt.
-  \citembullet {\it Databases}: MySQL, SQLite, Hypertable, Riak, Redis.
-  \citembullet {\it Tools}: Memcached, RabbitMQ, HAProxy, Nginx.
-  \citembullet {\it Version Control}: Git, Subversion, Mercurial,
-  Perforce.
-  \citembullet {\it Virtualization Platforms}: Xen, OpenVZ, KVM, VMware ESX(i).
-  \citembullet {\it Cloud Platforms}: Apache Hadoop, Google App Engine, Amazon EC2, Amazon S3.
-  \citembullet {\it Specialities}: Python, Cloud Computing, Scalable design, Big Data, Commandline 
-  tools, NoSQL databases, Virtualization, API design, Web services, Automation \& deployment, 
-  Desktop applications, Shell scripting, Userspace filesystems,
-  Microframeworks, deb/rpm package management, System integration, SAN, NAS.
-\end{category}
+\begin{itemize}
 
-% --------- Research ----------------------------------------------------
+\item{\cventry{Aug 2015 -- Present}{Staff Engineer}{Nutanix, Inc.}{Bangalore}{}{\vspace{3pt}Working as a Staff Engineer (Technical Lead) for the Cloud Mobility Services R\&D team at Nutanix, Inc.}
 
-\begin{category}{Interests}
-  \citemnobullet Opensource contributions, NoSQL databases, Big Data \& Analytics, Go, Openstack,
-  Linux containers and Docker, distributed and concurrent programming with Erlang, Amazon Dynamo architecture.
-\end{category}
+\begin{itemize}
+\item Implemented a UDP based reliable transport protocol (KCP) to boost migration throughput upto 7x on networks with high packet loss. 
+\item Designed and developed the Nutanix Move microservice stack \& application life cycle management (One-Click Upgrade) using Docker container ecosystem.
+\item Designed and developed a rules engine to programmatically define and predict workload requirements for migrations (DB Xtract).
+\item Designed a task execution framework for developers to easily define and execute application deployment \& migration workflows with support for pause, resume \& cancel operations.
+\item Lead the design and development FitCheck, a cluster health diagnostics tool.
+\end{itemize}
 
-% ------- Education ---------------------------------------------------
+\vspace{5pt}
 
-\begin{category}{Education}
-  \citem{B-Tech in Computer Science \& Engineering} \hfill \textbf{2004 -- 2008}
-  \citemnobullet University of Calicut, Jyothi Engineering College, Kerala.
-  \citem{Higher Secondary Education in Computer Science} \hfill \textbf{2002 -- 2004}
-  \citemnobullet Kshethra Pravesana Memorial Higher Secondary School, Poothotta, Kerala.
-\end{category}
+\textit{\textbf{Technology Stack:}} Python, Go, Docker, Swagger/OpenAPI, Packer.
 
-% -------- Opensource -------------------------------------------
+}
 
-\begin{category}{Opensource}
-  \citemnobullet List of major opensource contributions. Refer GitHub for details and source code.
-  \citembullet \textbf{Cyclozzo}: Opensource Edition of the Cyclozzo Platform as a Service.
-  \citembullet \textbf{EnlargeWeb}: Easy to use open source private and public cloud builder and manager. 
-  Supports deployments of Ubuntu, AppScale, Hadoop/HBase and Hypertable.
-  \citembullet \textbf{Voldemort}: Voldemort is a blog-aware static site generator using Jinja2 
-  and Markdown templates. Inspired by Jekyll, a static site generator written in Ruby.
-  \citembullet \textbf{Game of Life}: Conway's Game of Life simuation in Python \& PyQt. Supports LIF, JSON \&
-  RLE Cellular Automata file formats.
-  \citembullet \textbf{RegexMate}: A Visual Regular Expression Test/Evaluation tool written in PyQt.
-  \citembullet \textbf{Riak}: Various fixes and feature additions to
-  the Riak Python Client.
-  \citembullet \textbf{Cinephile}: A CLI tool to get
-  movie information from IMDB and download subtiles.
-  \citembullet \textbf{iDiscover}: A network discovery tool that fetches the manufacturer and IP information
-  of various connected devices in a network.
-  \citembullet \textbf{Tuxpaint}: A magic tool for Tuxpaint. Can be used as a reference to the magic tool API.
-  \citembullet \textbf{Pytt}: A simple BitTorrent tracker written in Python.
-  \citembullet \textbf{GitFS}: Helps to use GitHub storage space as a filesystem under Linux.
-\end{category}
+\vspace{6pt}
 
-% -------- Awards & Honours ---------------------------------------
+\item{\cventry{Sep 2012 -- Aug 2015}{Member of Technical Staff}{NetApp, Inc.}{Bangalore}{}{\vspace{3pt}Worked as part of a team responsible for participating in the development, testing and debugging of operating systems and file systems that run NetApp storage applications.}
 
-\begin{category}{Awards \&\\ Honours}
-  \citem{``Thank You Award Certificate of Recognition''}, {\em NetApp, Inc.}. \hfill \textbf{2013}
-  \citem{``Excellence in Software Development''}, {\em K7 Computing Private Limited}. \hfill \textbf{2011}
-  \citem{``Best Project''}, {\em Computer Science, Jyothi Engineering College}. \hfill \textbf{2008}
-  \citem{``Best Student''}, {\em Edakkattuvayal Grama Panchayat, Ernakulam, Kerala.} \hfill \textbf{2002}
-\end{category}
+\begin{itemize}
+\item Developed various data collection modules to collect Storage Array, Controller, Switch, Host, LUN etc. information for the NetApp Data Center Collector.
+\item Developed an XSLT based viewer for the NetApp Data Center Collector.
+\item Reduced the overall memory footprint of the collector module upto 3x and improved performance upto 2x.
+\item Developed a Migration Planner to generate heterogeneous SAN migration plans (LUNs from other storage vendors to configurations.
+\item Developed a Transition Planner to migrate LUNs from NetApp 7-Mode systems to clustered Data ONTAP using Data Transport Appliance (DTA2800).
+\end{itemize}
 
-% -------- Publication --------------------------------------------
+\vspace{5pt}
 
-\begin{category}{Publication}
-  \citemnobullet Technical articles published on various technology publications.
-  \citem{Linux For You}, {\em ``The New Scheduler on the Block, Dedicated to Desktops''}. \hfill \textbf{Oct 2009}
-  \citemnobullet An article about Brain Fuck Scheduler (BFS) for Linux written by famous Linux Kernel hacker Con Kolivas.
-  \citem{ILUG-Cochin}, {\em ``Custom Kernel Compilation - Ubuntu way''}. \hfill \textbf{Aug 2008}
-  \citemnobullet An article on compiling custom kernel sources on Ubuntu.
-  \citem{ILUG-Cochin}, {\em ``Remastering Ubuntu''}. \hfill \textbf{Aug 2008}
-  \citemnobullet An article on building custom Ubuntu distributions using Reconstructor.
-\end{category}
+\textit{\textbf{Technology Stack:}} Python, PyQt.
 
-%% \begin{category}{Organizations}
-%%  \citem Member of the {\em Python Software Society of India}.
-%% \end{category}
+}
 
-% -------- Reference --------------------------------------------
+\vspace{6pt}
 
-%% \begin{category}{Reference}
-%%   \citemnobullet \\
-%%   \begin{tabular}{ll}Shuveb Hussain&Navin Sylvester\\
-%%     Head, Cloud Computing&Development Manager, Cloud Computing\\
-%%     K7 Computing Private Limited&K7 Computing Private Limited\\
-%%     Chennai - 600041&Chennai - 600041\\
-%%     Email: \mbox{\small\tt shuveb@gmail.com}&Email: \mbox{\small\tt navinsylvester@gmail.com}\\
-%%     Ph: (+91)-98-4038-0386&Ph: (+91)-95-0008-7617
-%%   \end{tabular}
-%% \end{category}
+\item{\cventry{Feb 2009 -- August 2012}{Development Engineer}{K7 Computing Private Limited}{Chennai}{}{\vspace{3pt}Actively involved in the design and development of a cloud computing platform that can solve the problems of application scalability, availability and fault-tolerance.}
+
+\begin{itemize}
+%\item Lead a team of 3 developers to build a scalable platform for Python web applictions.
+%\item Helped clients to scale their applications and move towards private cloud.
+\item Developed core services and Google App Engine compatible apis for a PaaS project (Cyclozzo).
+\item Developed a FUSE file system for malware analysis, backed by Samba shares.
+\item Developed various modules and components of a Virtualization Platform (FluidVM) targeted at VPS Hosting Providers. Supports Xen, OpenVZ and KVM hypervisors.
+\item Developed HyperVM API emulation module for the Virtualization Management Platform.
+\item Developed a Login Shell for Data Center administrators to manage the Virtual Machines remotely.
+\end{itemize}
+
+\vspace{5pt}
+
+\textit{\textbf{Technology Stack:}} Python, C, Objective C, Protocol Buffers, FUSE, libvirt.
+
+}
+
+\vspace{6pt}
+
+\end{itemize}
+
+\section{Awards \& Recognitions}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{\cventry{2016}{The highest engineering accolade at Nutanix, in recognition of outstanding performance}{Engineering SuperHero Award}{Nutanix}{\textit{}}{}}
+
+\item{\cventry{2016}{Project Nixify, Nutanix orchestrator using TOSCA, \#1 in Top Ten Projects}{Nutanix Hackathon 3.0}{Nutanix}{\textit{}}{}}
+
+\end{itemize}
+
+\section{Education}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{\cventry{2004 -- 2008}{B-Tech in Computer Science \& Engineering}{University of Calicut}{Calicut, Kerala}{\textit{}}{}}
+
+\item{\cventry{2002 -- 2004}{Higher Secondary Education in Computer Science}{Kshethra Pravesana Memorial Higher Secondary School}{Ernakulam, Kerala}{\textit{}}{}}  % arguments 3 to 6 can be left empty
+
+\end{itemize}
+
+\vspace{2pt}
+
+\section{Opensource Projects}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{\textbf{Cyclozzo OSE:} \text{Opensource Edition of the Cyclozzo Platform as a Service.}}
+
+\item{\textbf{EnlargeWeb:} \text{Easy to use open source private and public cloud builder and manager. Supports deployments of Ubuntu, AppScale, Hadoop/HBase and Hypertable.}}
+
+\item{\textbf{Voldemort:} \text{Voldemort is a blog-aware static site generator using Jinja2 and Markdown templates. Inspired by Jekyll, a static site generator written in Ruby.}}
+
+\item{\textbf{Game of Life:} \text{Conway’s Game of Life simuation in Python \& PyQt. Supports LIF, JSON \& RLE Cellular Automata file formats.}}
+
+\item{\textbf{RegexMate:} \text{A Visual Regular Expression Test/Evaluation tool written in PyQt.}}
+
+\item{\textbf{Riak:} \text{Various fixes and feature additions to the Riak Python Client.}}
+
+\item{\textbf{wsnotifier:} \text{Lightweight gevent based Asynchronous WebSocket Server with HTTP forwarder APIs.}}
+
+\item{\textbf{TuxPaint:} \text{A magic tool for Tuxpaint. Can be used as a reference to the magic tool API.}}
+
+\item{\textbf{Pytt:} \text{A simple BitTorrent tracker written in Python.}}
+
+\item{\textbf{GitFS:} \text{Use GitHub storage space as a filesystem under Linux.}}
+
+\end{itemize}
+
+\section{Technical Skills}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item \textbf{Programming Languages:} Python, Go, C.
+
+%\item \textbf{Frameworks:} Pylons, web2py, Tornado, Flask, Bottle, webpy, PyQt.
+
+%\item \textbf{Databases:} MySQL, SQLite, Hypertable, Riak, Redis.
+
+%\item \textbf{Tools:} Memcached, RabbitMQ, HAProxy, Nginx.
+
+%\item \textbf{Version Control:} Git, Subversion, Mercurial, Perforce.
+
+%\item \textbf{Virtualization Platforms:} Xen, OpenVZ, KVM, VMware ESX(i).
+
+%\item \textbf{Cloud Platforms:} Apache Hadoop, Google App Engine, Amazon EC2, Amazon S3.
+
+%\item \textbf{Specialities:} Python, Cloud Computing, Scalable design, Big Data, Commandline tools, NoSQL databases, Virtualization, API design, Web services, Automation \& deployment, Desktop applications, Shell scripting, Userspace filesystems, Microframeworks, deb/rpm package management, System integration, SAN, NAS.
+
+\end{itemize}
+
+\section{Technical Publications}
+
+%\vspace{6pt}
+
+%Technical articles published on various technology publications.
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\cventry{October 2009}{"The New Scheduler on the Block, Dedicated to Desktops"}{Linux for You | Linux Magazine}{}{}{\vspace{3pt}An article about Brain Fuck Scheduler (BFS) for Linux.}}
+%\vspace{5pt}
+%\item{\cventry{August 2008}{"Custom Kernel compilation - The Ubuntu way"}{ILUG-Cochin}{}{}{\vspace{3pt}An article on compiling custom kernel sources on Ubuntu.}}
+%\vspace{5pt}
+%\item{\cventry{August 2008}{"Remastering Ubuntu"}{ILUG-Cochin}{}{}{\vspace{3pt}An article on building custom Ubuntu distributions using Reconstructor.}}
+
+\end{itemize}
+
+%\section{Interests}
+
+%\vspace{6pt}
+
+%\begin{itemize}
+
+%\item{Opensource contributions, NoSQL databases, Big Data \& Analytics, Go, Openstack, Linux containers and Docker, distributed and concurrent programming with Erlang, Amazon Dynamo architecture.}
+
+%\end{itemize}
+
+%\section{References}
+
+%\vspace{6pt}
+ 
+%\begin{itemize}
+
+%\item{Up to 4 references available on request}
+
+%\end{itemize}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
 \end{document}
+
+
+%% end of file `template.tex'.
