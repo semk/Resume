@@ -1,0 +1,202 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{DarkTeal}{HTML}{01626e}
+\definecolor{DarkGreen}{HTML}{013220}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\definecolor{GoogleBlue}{HTML}{4285F4}
+\definecolor{GoogleRed}{HTML}{DB4437}
+\definecolor{GoogleYellow}{HTML}{F4B400}
+\definecolor{GoogleGreen}{HTML}{0F9D58}
+
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+
+\begin{document}
+\name{Sreejith Kesavan}
+\tagline{Staff Engineer | Nutanix, Inc. | Cloud Mobility, Virtualization, Distributed Systems}
+% \photoR{2.5cm}{semk_bw}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{sreejithemk@gmail.com}
+  \phone{(+91)-99-8684-9928}
+  % \mailaddress{Nutanix, Inc., Bangalore}
+  % \location{Bangalore, KA, IN}
+  \homepage{foobarnbaz.com}
+  \github{semk}
+  \linkedin{sreejithemk}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Staff Engineer}{Nutanix, Inc.}{Aug 2015 -- Present}{Bangalore}
+\begin{itemize}
+\item Designed an agentless migration methodology for migrating Azure\\ virtual machines to on-premise AHV clusters.
+\item Improved the migration performance upto 7x for high latency, lossy\\ networks by leveraging KCP, a UDP based reliable protocol.
+\item Designed an application life cycle management system with upgrade\\ and rollback features using Docker container ecosystem.
+\item Built a minimal Docker container host operating system based on\\ Alpine Linux to ship non-core products as a virtual appliance.
+\item Designed and developed core functionalities of a database migration\\ platform which comprises of designer, deployer and migrator modules.
+\item Developed a task execution framework in Python with support for\\  pause, resume, cancel operations and progress monitoring.
+\item Lead the design and development of a cluster health diagnostics tool.
+\end{itemize}
+
+\divider
+
+\cvevent{Member of Technical Staff}{NetApp, Inc.}{Sep 2012 -- Aug 2015}{Bangalore}
+\begin{itemize}
+\item Developed data collection and reporting modules for the 7-Mode to Clustered Data ONTAP Transition Tool.
+\item Developed an XSLT based viewer for the inventory data collected by\\ the Inventory Collect Tool.
+\item Reduced the overall memory footprint of the collector module upto 3x and improved performance upto 2x.
+\item Developed a migration planner using PyQt to generate homogeneous and heterogeneous SAN migration plans which can be automated.
+\item Built a PyQt based GUI for viewing and uploading data collector bundle to a centralized NetApp filer.
+\end{itemize}
+
+\divider
+
+\cvevent{Development Engineer}{K7 Computing Pvt. Ltd.}{Feb 2009 -- Aug 2012}{Chennai}
+
+\begin{itemize}
+\item Developed core services, Google App Engine compatible APIs and\\ Python SDK for a PaaS platform.
+\item Developed a FUSE file system for malware analysis, backed by NFS.
+\item Developed various modules of a virtualization management platform that supports Xen, OpenVZ and KVM hypervisors.
+\item Developed HyperVM API emulator for the virtualization management platform to work with WHMCS plugins.
+\item Developed a management console for data center administrators to manage virtual machines remotely.
+\item Contributed to Hypertable Python client library development using boost-python.
+\end{itemize}
+
+\newpage
+
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{B-Tech in Computer Science \& \\Engineering}{University of Calicut, KL, IN}{July 2004 -- June 2008}{}
+
+\divider
+
+\cvevent{HSE in Computer Science}{KPM Higher Secondary, KL, IN}{June 2002 -- May 2004}{}
+
+\cvsection{Honours}
+
+\cvachievement{\faMedal}{Engineering SuperHero, 2016}{The highest engineering accolade at Nutanix}
+
+\divider
+
+\cvachievement{\faTrophy}{Nutanix Hackathon 3.0, 2016}{Nutanix HCI orchestrator using TOSCA, \#1 in Top Ten Projects}
+
+\cvsection{Publications}
+
+\cvachievement{\faBook}{Linux For You, Oct 2009}{"The New Scheduler on the Block, Dedicated to Desktops" -- An article on BFS scheduler for Linux}
+
+\cvsection{Expertise}
+
+\cvtag{Microservices Architecture}
+\cvtag{API Design}\\
+\cvtag{Relational \& NoSQL DBs}
+\cvtag{Containers}
+\cvtag{Distributed Systems}
+\cvtag{Cloud Platforms}
+\cvtag{Virtualization}
+\cvtag{Service Mesh}
+\cvtag{RPCs}
+
+\divider\smallskip
+
+\cvtag{Docker}
+\cvtag{Hypertable}
+\cvtag{Riak}
+\cvtag{AWS}
+\cvtag{Azure}
+\cvtag{App Engine}
+\cvtag{SaltStack}
+
+\cvsection{Programming}
+\cvskill{Python}{5}
+% \divider
+\cvskill{Go}{5}
+% \divider
+\cvskill{C}{4}
+\cvskill{Erlang}{3}
+
+\end{paracol}
+\end{document}
